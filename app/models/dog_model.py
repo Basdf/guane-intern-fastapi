@@ -12,7 +12,6 @@ class DogModel(BaseModel):
 
 class UpdateDogModel(BaseModel):
     id_user: Optional[str]
-    name: Optional[str]
     picture: Optional[str]
     create_date: Optional[str]
     is_adopted: Optional[bool]
@@ -20,12 +19,10 @@ class UpdateDogModel(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "id": "1",
-                "id_user": "15254",
-                "name": "firulais",
-                "picture": "https://images.dog.ceo/breeds/shiba/shiba.jpg",
-                "create_date": "05/04/2021",
-                "is_adopted": True,
+                "id_user": "1",
+                "picture": "URL HERE",
+                "create_date": "2021-04-08, 13:22:30.593272",
+                "is_adopted": False,
             }
         }
 
@@ -38,15 +35,32 @@ class DogResponse(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "data": {
-                    "id": "1",
-                    "id_user": "15254",
-                    "name": "firulais",
-                    "picture": "https://images.dog.ceo/breeds/shiba/shiba.jpg",
-                    "create_date": "05/04/2021",
-                    "is_adopted": True,
-                },
+                "data": [
+                    {
+                        "id": "1",
+                        "id_user": "1",
+                        "name": "firulais",
+                        "picture": "URL HERE",
+                        "create_date": "2021-04-08, 13:22:30.593272",
+                        "is_adopted": True,
+                    }
+                ],
                 "code": 200,
+                "message": "related message",
+            }
+        }
+
+
+class DogErrorResponse(BaseModel):
+    error: str
+    code: int = 400
+    message: str
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "error": "Error",
+                "code": 400,
                 "message": "related message",
             }
         }

@@ -39,14 +39,14 @@ class DogResponse(BaseModel):
                     {
                         "id": "1",
                         "id_user": "1",
-                        "name": "firulais",
+                        "name": "Sasha",
                         "picture": "URL HERE",
                         "create_date": "2021-04-08, 13:22:30.593272",
                         "is_adopted": True,
                     }
                 ],
                 "code": 200,
-                "message": "related message",
+                "message": "Related message",
             }
         }
 
@@ -61,6 +61,6 @@ class DogErrorResponse(BaseModel):
             "example": {
                 "error": "Error",
                 "code": 400,
-                "message": "related message",
+                "message": "Related message",
             }
         }

@@ -43,7 +43,7 @@ async def save_user_repository(user_data: dict):
 
 # Update a user with a matching ID
 async def update_user_repository(id: str, data: dict):
-    # Return false if an empty request body is sent.
+    # Return None if an empty request body is sent.
     if len(data) < 1:
         return False
 

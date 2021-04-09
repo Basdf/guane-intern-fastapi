@@ -53,7 +53,7 @@ async def save_dog_repository(dog_data: dict):
 
 # Update a dog with a matching name
 async def update_dog_repository(name: str, data: dict):
-    # Return false if an empty request body is sent.
+    # Return None if an empty request body is sent.
     if len(data) < 1:
         return None
 

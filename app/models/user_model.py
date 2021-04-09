@@ -51,7 +51,7 @@ class UserResponse(BaseModel):
                     }
                 ],
                 "code": 200,
-                "message": "related message",
+                "message": "Related message",
             }
         }
 
@@ -66,6 +66,6 @@ class UserErrorResponse(BaseModel):
             "example": {
                 "error": "Error",
                 "code": 400,
-                "message": "related message",
+                "message": "Related message",
             }
         }

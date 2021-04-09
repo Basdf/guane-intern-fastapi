@@ -11,8 +11,8 @@ router = APIRouter()
 
 @router.post(
     "/",
-    name="Create Token",
-    response_description="Create token",
+    name="Post Token",
+    response_description="Token created",
     response_model=TokenRespose,
 )
 async def post_token(res: Response, data: TokenModel = Body(...)):

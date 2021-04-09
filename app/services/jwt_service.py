@@ -29,4 +29,4 @@ async def post_token_service(data: dict):
     expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     data.update({"exp": expire})
     encoded_jwt = jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)
-    return TokenRespose(token=encoded_jwt, message="Token Generate")
+    return TokenRespose(token=encoded_jwt, message="Generated token")

@@ -40,7 +40,7 @@ async def get_adopted_dogs(res: Response):
 
 @router.get(
     "/{name}",
-    name="get Dog by name",
+    name="Get Dog by name",
     response_description="Dog data retrieved",
     response_model=DogResponse,
     responses={400: {"model": DogErrorResponse}},
